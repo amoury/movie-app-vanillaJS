@@ -1,3 +1,9 @@
 import style from './main.css';
+import { toggleMenu, tabsTransition } from './js/interactions';
+import { fetchMovies } from './js/model';
 
-console.log('Hello');
+toggleMenu();
+tabsTransition();
+
+
+window.addEventListener('load', fetchMovies());

@@ -42,11 +42,18 @@ span.movie_metadata {
   font-size: 0.8em;
 }
 
+.dropdown_box {
+  position: relative;
+  margin-right: 10px;
+}
+
 div.dots_menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  cursor: pointer;
 }
+
 
 div.dot {
   background: #fff;
@@ -56,12 +63,43 @@ div.dot {
   border-radius: 50%;
 }
 
+.dropdown_menu {
+  background: #fff;
+  position: absolute;
+  right: 0;
+  top: 60%;
+  padding: 10px;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 50;
+}
+
+.dropdown_menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown_menu > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown_menu ul li {
+  padding: 10px 0;
+}
+
 /* =========================================
 Navigation
 ============================================ */
 
 nav {
   background: #891250;
+  position: sticky;
+  top: 0;
+  display: flex;
 }
 
 ul.tabs {
@@ -69,6 +107,18 @@ ul.tabs {
   list-style: none;
   display: flex;
   padding: 20px 15px;
+  position: relative;
+}
+
+li.underline {
+  height: 2px;
+  width: 50%;
+  background: #fff;
+  border: 2px solid white;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  transition: left 0.3s ease-in-out;
 }
 
 li.tabs_item {
@@ -86,7 +136,17 @@ li.tabs_item:first-child {
   margin-left: 0;
 }
 
-li.tabs_item.active::after {
+li.tabs_item:first-child.active ~ 
+li.underline {
+  left: 0;
+}
+
+li.tabs_item:nth-child(2).active ~
+li.underline {
+  left: 50%;
+}
+
+/* li.tabs_item.active::after {
   content: "";
   border: 1px solid #fff;
   height: 1px;
@@ -95,7 +155,7 @@ li.tabs_item.active::after {
   background: #fff;
   bottom: -18px;
   left: 0;
-}
+} */
 
 
 /* =========================================
@@ -188,3 +248,24 @@ MOVIE DETAILS CARD
   font-weight: 700;
 }
 
+
+footer {
+  min-height: 2000px;
+}
+
+
+/* =========================================
+POPULAR MOVIES
+============================================ */
+
+.popular_movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  max-width: 250px;
+  margin: 20px;
+  cursor: pointer;
+}

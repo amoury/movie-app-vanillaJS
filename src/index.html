@@ -12,19 +12,22 @@
 
   <header>
     <div class="movie_details_box">
-      <h1 class="movie_title">Fight Club</h1>
-      <span class="movie_metadata">
-        <span class="movie_metadata_type">
-          CBFC A
-        </span>
-        1999 | Drama / Black Comedy | 2h 31m
-      </span>
+      <h1 id="movie_title" class="movie_title">Movie App</h1>
     </div>
 
-    <div class="dots_menu">
-      <div class="dot top"></div>
-      <div class="dot center"></div>
-      <div class="dot bottom"></div>
+    <div class="dropdown_box">
+      <div class="dots_menu" id="dots_menu">
+        <div class="dot top"></div>
+        <div class="dot center"></div>
+        <div class="dot bottom"></div>
+      </div>
+  
+      <div class="dropdown_menu">
+        <ul>
+          <li>Share</li>
+          <li>Send Feedback</li>
+        </ul>
+      </div>
     </div>
   </header>
 
@@ -32,69 +35,79 @@
 
   <nav>
     <ul class="tabs">
+      <li class="tabs_item">Popular Movies</li>
+    </ul>
+    <!-- <ul class="tabs">
       <li class="tabs_item active">Overview</li>
       <li class="tabs_item">Cast</li>
-    </ul>
+      <li class="underline"></li>
+    </ul> -->
   </nav>
 
 
   <!-- Gallery -->
+
+  <main>
+    <section id="poster_gallery">
+      <div class="poster">
+        <img src="./assets/img/poster_2.jpeg" alt="" class="img-responsive">
+      </div>
+      <div class="poster">
+        <img src="./assets/img/poster_3.jpeg" alt="" class="img-responsive">
+      </div>
+      <div class="poster">
+        <img src="./assets/img/poster_1.jpeg" alt="" class="img-responsive">
+      </div>
+      <div class="poster">
+        <img src="./assets/img/poster_2.jpeg" alt="" class="img-responsive">
+      </div>
+      <div class="poster">
+        <img src="./assets/img/poster_2.jpeg" alt="" class="img-responsive">
+      </div>
+    </section>
   
-  <section id="poster_gallery">
-    <div class="poster">
-      <img src="./assets/img/poster_2.jpeg" alt="" class="img-responsive">
-    </div>
-    <div class="poster">
-      <img src="./assets/img/poster_3.jpeg" alt="" class="img-responsive">
-    </div>
-    <div class="poster">
-      <img src="./assets/img/poster_1.jpeg" alt="" class="img-responsive">
-    </div>
-    <div class="poster">
-      <img src="./assets/img/poster_2.jpeg" alt="" class="img-responsive">
-    </div>
-    <div class="poster">
-      <img src="./assets/img/poster_2.jpeg" alt="" class="img-responsive">
-    </div>
-  </section>
-
-
-  <!-- Movie Details Card -->
-
-  <section id="movie_details">
-    <div class="movie_details_card">
-      <div class="movie_ratings">
-        <div class="rating">
-          <h2 class="rating_score">8.8/10</h2>
+  
+    <!-- Movie Details Card -->
+  
+    <section id="movie_details">
+      <div class="movie_details_card">
+        <div class="movie_ratings">
+          <div class="rating">
+            <h2 class="rating_score">8.8/10</h2>
+            <p class="rating_source">
+              <a href="http://imdb.com">IMDb</a>
+            </p>
+          </div>
+  
+          <div class="rating">
+            <h2 class="rating_score">79%</h2>
+            <p class="rating_source">
+              <a href="http://rotten.com">Rotten Tomatoes</a>
+            </p>
+          </div>
+        </div>
+  
+        <div class="movie_google_data">
+          <h2 class="rating_score">93% liked this film</h2>
           <p class="rating_source">
-            <a href="http://imdb.com">IMDb</a>
+            <a href="http://google.com">Google users</a>
           </p>
         </div>
-
-        <div class="rating">
-          <h2 class="rating_score">79%</h2>
-          <p class="rating_source">
-            <a href="http://rotten.com">Rotten Tomatoes</a>
-          </p>
+  
+        <div class="movie_description">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dicta praesentium pariatur rem beatae? Iure possimus sapiente officia nulla saepe eum quia recusandae amet ex, odio facere nostrum culpa rerum?</p>
+        </div>
+        <div class="movie_additional_details_switch">
+          <p class="additional_details_toggle">More about this movie</p>
         </div>
       </div>
+    </section>
 
-      <div class="movie_google_data">
-        <h2 class="rating_score">93% liked this film</h2>
-        <p class="rating_source">
-          <a href="http://google.com">Google users</a>
-        </p>
-      </div>
+  </main>
+  
 
-      <div class="movie_description">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dicta praesentium pariatur rem beatae? Iure possimus sapiente officia nulla saepe eum quia recusandae amet ex, odio facere nostrum culpa rerum?</p>
-      </div>
-      <div class="movie_additional_details_switch">
-        <p class="additional_details_toggle">More about this movie</p>
-      </div>
-    </div>
-  </section>
+  <footer>
 
-
+  </footer>
 </body>
 </html>
