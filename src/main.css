@@ -7,6 +7,13 @@ body {
   margin: 0;
 }
 
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* =========================================
 Header
 ============================================ */
@@ -200,12 +207,15 @@ MOVIE DETAILS CARD
 
 .movie_ratings {
   display: flex;
-  border-bottom: 1px solid lightgray;
+  /* border-bottom: 1px solid lightgray; */
+  flex-wrap: wrap;
 }
 
 .rating {
-  width: 50%;
+  min-width: 50%;
   padding: 0 10px;
+  border-bottom: 0.5px solid lightgray;
+  flex-grow: 1;
 }
 
 .rating:first-child {
@@ -265,7 +275,7 @@ POPULAR MOVIES
 }
 
 .movie {
-  max-width: 250px;
-  margin: 20px;
+  max-width: 150px;
+  margin: 10px;
   cursor: pointer;
 }
